@@ -390,9 +390,6 @@ func TestOrganizationReconciler_reconcileNormal(t *testing.T) {
 			// create a fake reconciler
 			reconciler := &OrganizationReconciler{
 				Client:   client,
-				BaseURL:  "http://domain.does.not.exist:9997",
-				Username: "admin",
-				Password: "admin",
 				Recorder: record.NewFakeRecorder(3),
 			}
 
@@ -485,9 +482,6 @@ func TestOrganizationReconciler_reconcileDelete(t *testing.T) {
 			// create a fake reconciler
 			reconciler := &OrganizationReconciler{
 				Client:   client,
-				BaseURL:  "http://domain.does.not.exist:9997",
-				Username: "admin",
-				Password: "admin",
 				Recorder: record.NewFakeRecorder(3),
 			}
 
