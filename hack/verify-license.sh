@@ -32,8 +32,8 @@ for file in "${all_error_files[@]}"; do
     matches=$(head -n 2 "$file" | grep "$HEADER" | wc -l)
     set -e
     if [[ "$matches" -ne "1" ]]; then
-        errors+=("${file}")
-        echo "error checking ${file} for the SPDX header"
+        errors+=("$file")
+        echo "error checking $file for the SPDX header"
     fi
 done
 
