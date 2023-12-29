@@ -29,7 +29,7 @@ for file in "${all_error_files[@]}"; do
         continue
     fi
     set +e
-    matches=$(head -n 2 $file | grep "$HEADER" | wc -l)
+    matches=$(head -n 2 "$file" | grep "$HEADER" | wc -l)
     set -e
     if [[ "$matches" -ne "1" ]]; then
         errors+=("${file}")
