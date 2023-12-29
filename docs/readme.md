@@ -3,11 +3,12 @@
 # Documentation
 
 <!-- toc -->
+
 - [Quickstart](#quickstart)
 - [how to](#how-to)
   - [scale runners](#scale-runners)
   - [pause reconciliation](#pause-reconciliation)
-<!-- /toc -->
+  <!-- /toc -->
 
 ## Quickstart
 

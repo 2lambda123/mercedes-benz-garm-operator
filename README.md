@@ -1,12 +1,13 @@
 <!-- SPDX-License-Identifier: MIT -->
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/mercedes-benz/garm-operator)](https://goreportcard.com/report/github.com/mercedes-benz/garm-operator) 
+[![Go Report Card](https://goreportcard.com/badge/github.com/mercedes-benz/garm-operator)](https://goreportcard.com/report/github.com/mercedes-benz/garm-operator)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/mercedes-benz/garm-operator?sort=semver)
 [![build](https://github.com/mercedes-benz/garm-operator/actions/workflows/build.yml/badge.svg)](https://github.com/mercedes-benz/garm-operator/actions/workflows/build.yml)
 
-# garm-operator 
+# garm-operator
 
 <!-- toc -->
+
 - [✨ What is the <code>garm-operator</code>?](#-what-is-the-garm-operator)
 - [🔀 Versioning](#-versioning)
   - [Garm Version](#garm-version)
@@ -60,7 +61,7 @@ This manifests can be used to deploy the `garm-operator` into your Kubernetes cl
 
 ```bash
 export GARM_OPERATOR_VERSION=<garm-operator-version>
-export GARM_SERVER_URL=<garm-server-url> 
+export GARM_SERVER_URL=<garm-server-url>
 export GARM_SERVER_USERNAME=<garm-server-username>
 export GARM_SERVER_PASSWORD=<garm-server-password>
 export OPERATOR_WATCH_NAMESPACE=<operator-watch-namespace>

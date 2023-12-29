@@ -7,6 +7,7 @@ The configuration parsing for the Garm Operator is implemented with [koanf](http
 The configuration can be defined with `ENVs`, `Flags` and `config file (yaml)`.
 
 <!-- toc -->
+
 - [Parsing Order](#parsing-order)
 - [ENVs](#envs)
 - [Flags](#flags)

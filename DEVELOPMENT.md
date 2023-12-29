@@ -3,10 +3,11 @@
 # Development
 
 <!-- toc -->
+
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
   - [🐛 Debugging](#-debugging)
-<!-- /toc -->
+  <!-- /toc -->
 
 ## Prerequisites
 
@@ -23,12 +24,12 @@ All other remaining tools (e.g. `kustomize`) are getting installed automatically
 
 1. Depending on the `garm` server you want to use, you have to specify the server URL and the corresponding username and password in the `config/overlays/local/manager_patch.yaml` file.
 1. Start the development environment by running `make tilt-up` in the root directory of this repository.
-   
+
    This will start a local Kubernetes cluster using `kind` (`kind get clusters` will show you a `garm-operator` cluster) and deploy the `garm-operator` into it.
 
    The `make tilt-up` command will give you the URL to the local tilt environment.
-1. Time to start developing. 🎉
 
+1. Time to start developing. 🎉
 
 ### 🐛 Debugging
 
@@ -53,16 +54,16 @@ The following steps are required to start debugging the `garm-operator`:
       1. Create a `launch.json` file in the `.vscode` directory with the following content:
          ```json
          {
-             "version": "0.2.0",
-             "configurations": [
-                 {
-                     "name": "garm-operator - attach",
-                     "type": "go",
-                     "request": "attach",
-                     "mode": "remote",
-                     "port": 2345
-                 }
-             ]
+           "version": "0.2.0",
+           "configurations": [
+             {
+               "name": "garm-operator - attach",
+               "type": "go",
+               "request": "attach",
+               "mode": "remote",
+               "port": 2345
+             }
+           ]
          }
          ```
 1. Happy debugging 🐛
