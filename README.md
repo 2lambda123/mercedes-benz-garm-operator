@@ -1,6 +1,8 @@
 <!-- SPDX-License-Identifier: MIT -->
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/mercedes-benz/garm-operator)](https://goreportcard.com/report/github.com/mercedes-benz/garm-operator) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/mercedes-benz/garm-operator?sort=semver)
+[![Go Report Card](https://goreportcard.com/badge/github.com/mercedes-benz/garm-operator)](https://goreportcard.com/report/github.com/mercedes-benz/garm-operator) 
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/mercedes-benz/garm-operator?sort=semver)
+[![build](https://github.com/mercedes-benz/garm-operator/actions/workflows/build.yml/badge.svg)](https://github.com/mercedes-benz/garm-operator/actions/workflows/build.yml)
 
 # garm-operator 
 
@@ -23,6 +25,8 @@
 ## ✨ What is the `garm-operator`?
 
 `garm-operator` is a [Kubernetes®](https://kubernetes.io) operator that manages the lifecycle of [garm](https://github.com/cloudbase/garm) objects by creating/updating/deleting corresponding objects in the Kubernetes cluster.
+
+![garm components overview](docs/assets/overview.png "Architecture Overview")
 
 ## 🔀 Versioning
 
@@ -55,14 +59,19 @@ We are releasing the `garm-operator` as container image together with the corres
 This manifests can be used to deploy the `garm-operator` into your Kubernetes cluster.
 
 ```bash
-export GARM_OPERATOR_VERSIOn=<garm-operator-version>
+export GARM_OPERATOR_VERSION=<garm-operator-version>
 export GARM_SERVER_URL=<garm-server-url> 
 export GARM_SERVER_USERNAME=<garm-server-username>
 export GARM_SERVER_PASSWORD=<garm-server-password>
+export OPERATOR_WATCH_NAMESPACE=<operator-watch-namespace>
 curl -L https://github.com/mercedes-benz/garm-operator/releases/download/${GARM_OPERATOR_VERSION}/garm-operator-all.yaml | envsubst | kubectl apply -f -
 ```
 
+The full configuration parsing documentation can be found in the [configuration parsing guide](./docs/config/configuration-parsing.md)
+
 #### Custom Resources
+
+The CRD documentation can be also seen via [docs.crds.dev](https://doc.crds.dev/github.com/mercedes-benz/garm-operator).
 
 Folder `config/samples` contains few basic examples of `Pools`, `Images` and corresponding `Repositories`, `Organizations` or `Enterprises`.
 
