@@ -11,21 +11,21 @@ metadata:
     app.kubernetes.io/managed-by: kustomize
   name: runner-editor-role
 rules:
-- apiGroups:
-  - garm-operator.mercedes-benz.com
-  resources:
-  - runners
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
-  - garm-operator.mercedes-benz.com
-  resources:
-  - runners/status
-  verbs:
-  - get
+  - apiGroups:
+      - garm-operator.mercedes-benz.com
+    resources:
+      - runners
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - garm-operator.mercedes-benz.com
+    resources:
+      - runners/status
+    verbs:
+      - get
